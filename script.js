@@ -4,7 +4,7 @@ const list = document.querySelector(".todos");
 // console.log(list.innerHTML);
 
 const search = document.querySelector(".search input");
-
+// 
 
 
 
@@ -31,6 +31,10 @@ addForm.addEventListener("submit", e=> {
        generateTemplate(todo); 
        addForm.reset();
     }
+    // saveToLocal(todo);
+    // getTodos();
+
+
 });
 
 // delete todos
@@ -52,10 +56,46 @@ const filterTodos = (term) =>{
 
 
 search.addEventListener("keyup", () => {
-
     const term = search.value.trim();
     filterTodos(term);
 
 });
+
+// localStorage.setItem("name","eric");
+// localStorage.removeItem("name");
+// console.log(localStorage.getItem("name"));
+
+
+// store in localStorage
+// function saveToLocal(todo){
+//     let todos;
+//     if(localStorage.getItem("todos") === null){
+//         todos = [];
+//     }else{
+//     todos = JSON.parse(localStorage.getItem("todos"));
+//     }
+//     todos.push(todo);
+//     localStorage.setItem("todos", JSON.stringify(todos));
+// }
+
+// Retrieve from localstorage
+
+// function getTodos(){
+//     let todos;
+//     if(localStorage.getItem("todos") === null){
+//         todos = [];
+//     }else{
+//     todos = JSON.parse(localStorage.getItem("todos"));
+//     }
+//     todos.push(todo);
+
+//     localStorage.setItem("todos", JSON.stringify(todos));
+
+//     todos.forEach((todo)=>{
+//         generateTemplate(todo);
+//     })
+
+// }
+
 
 
