@@ -10,6 +10,7 @@ The objective of this project was to create a simple to do app, but intead of ad
 <ul>
   <li>Captures user input and display them on the DOM  </li>
   <li> Add Create/Remove functions</li>
+  <li> utilize local storage to keep list after each refresh </li>
   
 </ul>
 
